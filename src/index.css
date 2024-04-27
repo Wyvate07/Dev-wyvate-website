@@ -1,0 +1,150 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+.top-stack{
+  box-shadow: inset 1px 1px 50px #545454;
+}
+body{
+  font-family: 'Manrope', sans-serif;
+}
+.hero{
+  margin: 0;
+  padding: 0;
+  background: center center/cover no-repeat;
+  background-image: url('Rectangle 70.png');
+  animation: slideshow 16s infinite;
+}
+@keyframes slideshow {
+  0% { background-image: url('backimg/Rectangle 70.png'); }
+  25% { background-image: url('backimg/Rectangle 66.png'); }
+  50% { background-image: url('backimg/Rectangle 67.png'); }
+  75% { background-image: url('backimg/Rectangle 71.png'); }
+  100% { background-image: url('backimg/Rectangle 70.png'); }
+}
+.sliderimgbox{
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  /* width: 120% !important; */
+}
+
+.slide {
+  transform: scale(0.3);
+  transition: transform 300ms;
+}
+
+.activeSlide {
+  transition: transform 300ms;
+  transform: scale(.7);
+  opacity: 1;
+}
+
+.adjacentSlide{
+  transition: transform 300ms;
+  transform: scale(.45);
+  opacity: 1;
+}
+
+.arrow {
+  background-color: #fff;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+.titlebox{
+  box-shadow: 5px 5px 2px black;
+}
+
+
+.next {
+  right: -11%;
+  top: 35%;
+}
+
+.prev {
+  left: -11%;
+  top: 35%;
+}
+.mid1-container{
+  background-image: url("backimg/Rectangle 1893.png");
+  background-size: cover;
+  z-index: 10;
+  position: relative;
+  font-family: 'Manrope', sans-serif;
+
+}
+.mid-heading{
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+}
+hr{
+  border-top-width:3px;
+}
+.card{
+  background: url("backimg/cardback.png"), rgb(33, 33, 33) 50%;
+  background-size: cover;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.terms{
+  box-shadow: rgb(38, 57, 77) 0px 10px 30px -10px;
+
+}
+@media(max-width:800px){
+  .nav-btn p,.nav-logo,.hero-mob,.mid1-btn p,.midsec2-img img, .midsec2-btn p,.midsec2-btn h1, .footer-para,.loader  {
+    display: none;
+  }
+  
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-color: #ccc #0000;
+  animation: l16 1s infinite linear;
+}
+.loader::before,
+.loader::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+}
+.loader::before {
+  border-color: #f03355 #0000;
+  animation: inherit; 
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+.loader::after {
+  margin: 8px;
+}
+@keyframes l16 { 
+  100%{transform: rotate(1turn)}
+}
+
+/* .backsec span{
+
+  box-shadow: 2px 2px 30px inset  black;
+} */
+/* .anihero{
+  background-image: url("backimg/heroback.jpg");
+  background-size: cover;
+  z-index: -999;
+} */
+/* .rightdiv{
+  background: #AAFFA9;  
+  background: -webkit-linear-gradient(to right, #11FFBD, #AAFFA9);  
+background: linear-gradient(to right, #11FFBD, #AAFFA9); 
+
+} */
+.glassphone{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
